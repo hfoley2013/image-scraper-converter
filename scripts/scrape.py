@@ -54,7 +54,7 @@ def process_sitemap(sitemap_url, folder):
 def main():
     # Replace 'your_sitemap_url_here' with the actual URL of the sitemap
     sitemap_url = input('Enter the sitemap URL:\n')
-    image_folder = '../downloaded_images'
+    image_folder = 'downloaded_images'
 
     os.makedirs(image_folder, exist_ok=True)
     
