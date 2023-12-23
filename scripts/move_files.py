@@ -19,7 +19,7 @@ def move_webp_files(src_folder, dest_folder):
         print(f"Moved: {webp_file}")
 
 if __name__ == "__main__":
-    source_folder = "./downloaded_images"
-    destination_folder = "./converted_images"
+    source_folder = "./image_scrape/downloaded_images"
+    destination_folder = "./image_scrape//converted_images"
 
     move_webp_files(source_folder, destination_folder)
