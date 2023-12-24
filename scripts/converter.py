@@ -1,6 +1,6 @@
 from pathlib import Path
 from PIL import Image
-
+from itertools import chain
 
 def convert_to_webp(source):
     """Convert image to webp.
@@ -20,8 +20,19 @@ def convert_to_webp(source):
 
 
 def main():
-    paths = Path("./image_scrape/downloaded_images").glob("**/*.png")
-    for path in paths:
+    png_images = Path("./downloaded_images").glob("**/*.png")
+    jpg_images = Path("./downloaded_images").glob("**/*.jpg")
+    jpeg_images = Path("./downloaded_images").glob("**/*.jpeg")
+    
+    for path in png_images:
+        webp_path = convert_to_webp(path)
+        print(webp_path)
+    
+    for path in jpg_images:
+        webp_path = convert_to_webp(path)
+        print(webp_path)
+
+    for path in jpeg_images:
         webp_path = convert_to_webp(path)
         print(webp_path)
 
